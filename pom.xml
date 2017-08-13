@@ -188,8 +188,8 @@
 						<version>2.20</version>
 						<configuration>
 							<includes>
-								<include>**/contracttests/**/*Tests.java</include>
-								<include>**/contracttests/**/*Test.java</include>
+								<include>**/contracttests/*Tests.java</include>
+								<include>**/contracttests/*Test.java</include>
 							</includes>
 						</configuration>
 					</plugin>

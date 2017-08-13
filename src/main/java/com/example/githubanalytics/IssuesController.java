@@ -36,4 +36,8 @@ class IssuesController {
 		service.save(issue.getUserName(), issue.getRepository());
 	}
 
+	@DeleteMapping
+	void delete() {
+		service.deleteAll();
+	}
 }
