@@ -1,0 +1,13 @@
+test:
+  services:
+    - type: rabbitmq
+      name: rabbitmq-github-analytics
+    - type: mysql
+      name: mysql-github-analytics
+    - type: eureka
+      name: eureka-github-analytics
+      coordinates: com.example.eureka:github-eureka:0.0.1.M1
+    - type: stubrunner
+      name: stubrunner-github-analytics
+      coordinates: com.example.github:github-analytics-stub-runner-boot-classpath-stubs:0.0.1.M1
+      userClasspath: true

@@ -1,0 +1,7 @@
+---
+applications:
+  - name: github-analytics
+    services:
+      - github-rabbitmq
+      - mysql-github-analytics
+      - github-eureka
