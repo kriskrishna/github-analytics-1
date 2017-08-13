@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.metrics.instrument.Gauge;
 import org.springframework.metrics.instrument.MeterRegistry;
 import org.springframework.stereotype.Service;
 
@@ -38,7 +37,7 @@ class IssuesService {
 	List<IssueDto> list() {
 		List<IssueDto> issues = new ArrayList<>();
 		repository.findAll().forEach(i ->
-			issues.add(new IssueDto(i.getUsername(), i.getRepository())));
+			issues.add(new IssueDto(i.getUsername(), i.getRepo())));
 		return issues;
 	}
 }

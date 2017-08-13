@@ -25,10 +25,10 @@ class Issue {
 	@NotNull
 	private String username;
 	@NotNull
-	private String repository;
+	private String repo;
 
 	Issue(String username, String repository) {
 		this.username = username;
-		this.repository = repository;
+		this.repo = repository;
 	}
 }
