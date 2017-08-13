@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.metrics.instrument.MeterRegistry;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,8 +16,9 @@ class IssuesService {
 
 	private final IssuesRepository repository;
 
-	IssuesService(IssuesRepository repository) {
+	IssuesService(IssuesRepository repository, MeterRegistry meterRegistry) {
 		this.repository = repository;
+		meterRegistry.gauge("issues", this, IssuesService::count);
 	}
 
 	void save(String user, String repo) {
