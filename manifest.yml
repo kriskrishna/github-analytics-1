@@ -1,7 +1,9 @@
 ---
 applications:
-  - name: github-analytics
-    services:
-      - github-rabbitmq
-      - mysql-github-analytics
-      - github-eureka
+- name: github-webhook
+  services:
+    - github-rabbitmq
+    - github-eureka
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    DEBUG: "true"
